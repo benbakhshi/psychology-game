@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
 
                 var hint = $("<a/>").html(riddle.hints[i]).addClass('btn btn-large btn-success').data('toggle','popover').data('content','"+riddle.hints[i]+"').data('original-title','Hint "+i+"')
 
-                $(this).after(hint)
+                $('#hints').after(hint)
                 }
             })
         console.log(riddle);
@@ -43,41 +43,41 @@ jQuery(document).ready(function() {
 
 
 
-
-
-    function take_new_q() {
-		$("#loader").load("./question");
-		number++
-		$('div div.number').text(number);
-
-	}
-
-	function check_q(question,answer) {
-		$.get("./answer", {q:question,a:answer}, function(res){
-			if (res == "True") {
-				take_new_q();
-
-				if (score == 0) {score += 1000}
-
-				else {
-					score = score * 2
-					}
-				console.log(score)
-				$('div div.score').text(score);
-			}
-			else {
-				quit_game();
-
-			}
-		})
-	}
-
-	$("div#loader").on('click', 'button.opt', function() {
-		var q = $('div.question').data('q');
-		var a = $(this).data('opt')
-		if (q != null && a != undefined) {
-			$("ul.options button").attr('disabled','disabled');
-			check_q(q,a);
-		}
-	});
+//
+//
+//    function take_new_q() {
+//		$("#loader").load("./question");
+//		number++
+//		$('div div.number').text(number);
+//
+//	}
+//
+//	function check_q(question,answer) {
+//		$.get("./answer", {q:question,a:answer}, function(res){
+//			if (res == "True") {
+//				take_new_q();
+//
+//				if (score == 0) {score += 1000}
+//
+//				else {
+//					score = score * 2
+//					}
+//				console.log(score)
+//				$('div div.score').text(score);
+//			}
+//			else {
+//				quit_game();
+//
+//			}
+//		})
+//	}
+//
+//	$("div#loader").on('click', 'button.opt', function() {
+//		var q = $('div.question').data('q');
+//		var a = $(this).data('opt')
+//		if (q != null && a != undefined) {
+//			$("ul.options button").attr('disabled','disabled');
+//			check_q(q,a);
+//		}
+//	});
 });
