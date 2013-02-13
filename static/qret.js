@@ -5,13 +5,13 @@ jQuery(document).ready(function() {
 
         $('.question').text(riddle.question);
 
-        $('#hints').each(riddle.hints, function(){
+        $.each(riddle.hints, function(){
 
             for (var i=0; i < riddle.hints.length; i++) {
 
                 var hint = $("<a/>").html(riddle.hints[i]).addClass('btn btn-large btn-success').data('toggle','popover').data('content','"+riddle.hints[i]+"').data('original-title','Hint "+i+"')
 
-                $('#hints').after(hint)
+                $('#hints').append(hint)
                 }
             })
         console.log(riddle);
@@ -20,8 +20,10 @@ jQuery(document).ready(function() {
         console.log(riddle.possible_answers);
             }
 
-    loadContent(RIDDLE);
-
+    // loadContent(RIDDLE);
+	$.get('/get_a_question/', function(j) {
+		loadContent(j);
+	});
 
 
 //    $('#hints').after(

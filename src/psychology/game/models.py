@@ -1,9 +1,16 @@
 from django.db import models
 
+class World(models.Model):
+	"""each world contains multiple Riddles"""
+	"""Worlds get more difficult"""
+	num = models.IntegerField()
+
+	
 class Riddle(models.Model):
 	"""represents a riddle, comprising a question and hints"""
+	world = models.ForeignKey(World)
 	question = models.TextField()
-
+	num = models.IntegerField()
 
 class Hint(models.Model):
 	riddle = models.ForeignKey(Riddle)
