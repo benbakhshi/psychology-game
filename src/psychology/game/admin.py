@@ -11,17 +11,23 @@ class AnswerInline(admin.TabularInline):
 	list_display = ('answer',)
 
 class LevelAdmin(admin.ModelAdmin):
-	fieldsets = [
-	(None, 		{'fields': ['question']}),
-	
-	]
+#	fieldsets = [
+#	(None, 		{'fields': ['world', 'question']}),
+#	
+#	]
 	inlines = [HintInline, AnswerInline]
 	
-	list_display = ('question', 'get_world')
+	
+	list_display = ('num','get_world','hint_count',)
+	
+	def hint_count(self,obj):
+		return obj.hints.count()
 	
 	def get_world(self, obj):
 		return obj.world.num
-	get_world.short_description = 'World'
+#	
+	get_world.short_description = 'World Number'
+	
 
 class LevelInline(admin.TabularInline):
 	model = models.Level
@@ -35,7 +41,7 @@ class WorldAdmin(admin.ModelAdmin):
 	def get_level(self, obj):
 		return obj.level_set.count()
 	
-	get_level.short_description = 'Question'
+	get_level.short_description = 'Levels'
 	
 	inlines = [LevelInline,]
 	list_display = ('num', 'get_level')

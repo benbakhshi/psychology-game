@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+
+{% for hint in level.hints.all %}
+<input type="button" name="{{hint.pk}}" value="hint {{forloop.counter}}" id=""/>
+{% endfor %}
+
+<br>
+Answer: <input>
+
+</body>
+
+</html>
