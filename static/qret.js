@@ -4,44 +4,54 @@ jQuery(document).ready(function() {
     function loadContent(riddle) {
 
         $('.question').text(riddle.question);
+		$('#hint').data('content','h1 content')
+        // $.each(riddle.hints, function(){
+// 
+            // for (var i=0; i < riddle.hints.length; i++) {
+// 
+                // var hint = $("<a/>").html(riddle.hints).addClass('btn btn-large btn-success').data('toggle','popover').data('content','riddle.hints').data('original-title','Hint')
+// // 
+                // $('#hints').append(hint)
+                // }
+            // // })
+        // console.log(riddle);
+        // console.log(riddle.hints);
+        // console.log(riddle.hints[0]);
+        // console.log(riddle.possible_answers);
+            // }
+	}
+	// $.get('/get_a_question/', function(j) {
+		// loadContent(j);
+	// });
+	// build a handler for /get_a_question
+	
+   $('.hints').append(
+       '<a href="#" id="hint" class="btn btn-large btn-success" data-toggle="popover" title="" data-content="Hint 1 Content" data-original-title="Hint 1 Title">Hint 1</a>'
+   )
+   
+    loadContent(RIDDLE);
 
-        $.each(riddle.hints, function(){
+   $('#hint').click( function() {
+       $('.hints').append(
+       '<a href="#" id="hint2" class="btn btn-large btn-success" data-toggle="popover" title="" data-content="Hint 2 Content" data-original-title="Hint 2 Title">Hint 2</a>'
+   ),
+       $(this).addClass('disabled'),
+       $(this).popover('show')
+   }).mouseleave( function() {
+           $('#hint').popover('hide')    
+      });
 
-            for (var i=0; i < riddle.hints.length; i++) {
-
-                var hint = $("<a/>").html(riddle.hints[i]).addClass('btn btn-large btn-success').data('toggle','popover').data('content','"+riddle.hints[i]+"').data('original-title','Hint "+i+"')
-
-                $('#hints').append(hint)
-                }
-            })
-        console.log(riddle);
-        console.log(riddle.hints);
-        console.log(riddle.hints[0]);
-        console.log(riddle.possible_answers);
-            }
-
-    // loadContent(RIDDLE);
-	$.get('/get_a_question/', function(j) {
-		loadContent(j);
-	});
+   $('body').on('click','#hint2', function() {
+       $('.hints').append(
+       '<a href="#" id="hint2" class="btn btn-large btn-success" data-toggle="popover" title="" data-content="Hint 2 Content" data-original-title="Hint 2 Title">Hint 3</a>'
+   ),
+       $(this).addClass('disabled') 
+    });
 
 
-//    $('#hints').after(
-//        '<a href="#" id="hint" class="btn btn-large btn-success" data-toggle="popover" title="" data-content="Hint 1 Content" data-original-title="Hint 1 Title">Hint 1</a>'
-//    )
 
-//    $('#hint').click( function() {
-//        $(this).addClass('disabled'),
-//        $(this).popover('show')
-//    }).mouseleave( function() {
-//            $('#hint').popover('hide')
-//        })
-//
-//    $('body').on('mouseenter','#hint.disabled', function() {
-//        $(this).popover('show');
-//        }).mouseleave( function(){
-//            $(this).parent('#hint').popover('hide');
-//        });
+});
+
 
 
 
@@ -82,4 +92,3 @@ jQuery(document).ready(function() {
 //			check_q(q,a);
 //		}
 //	});
-});

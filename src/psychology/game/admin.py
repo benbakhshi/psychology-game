@@ -10,7 +10,7 @@ class AnswerInline(admin.TabularInline):
 	extra = 2
 	list_display = ('answer',)
 
-class RiddleAdmin(admin.ModelAdmin):
+class LevelAdmin(admin.ModelAdmin):
 	fieldsets = [
 	(None, 		{'fields': ['question']}),
 	
@@ -23,8 +23,8 @@ class RiddleAdmin(admin.ModelAdmin):
 		return obj.world.num
 	get_world.short_description = 'World'
 
-class RiddleInline(admin.TabularInline):
-	model = models.Riddle
+class LevelInline(admin.TabularInline):
+	model = models.Level
 	extra = 2
 	
 class WorldAdmin(admin.ModelAdmin):
@@ -32,14 +32,14 @@ class WorldAdmin(admin.ModelAdmin):
 	(None, 		{'fields': ['num']})
 	]
 	
-	def get_riddle(self, obj):
-		return obj.riddle_set.count()
+	def get_level(self, obj):
+		return obj.level_set.count()
 	
-	get_riddle.short_description = 'Question'
+	get_level.short_description = 'Question'
 	
-	inlines = [RiddleInline,]
-	list_display = ('num', 'get_riddle')
+	inlines = [LevelInline,]
+	list_display = ('num', 'get_level')
 
 admin.site.register(models.World, WorldAdmin)
-admin.site.register(models.Riddle, RiddleAdmin)
+admin.site.register(models.Level, LevelAdmin)
 
