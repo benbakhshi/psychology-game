@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4faa2466-7a21-481e-aa7d-f173a5b8582f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/psychology/game/templates/level.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/psychology/game/templates/level.html" afterPath="$PROJECT_DIR$/psychology/game/templates/level.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/psychology/game/views.py" afterPath="$PROJECT_DIR$/psychology/game/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/psychology/settings.py" afterPath="$PROJECT_DIR$/psychology/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/psychology/urls.py" afterPath="$PROJECT_DIR$/psychology/urls.py" />
     </list>
     <ignored path="src.iws" />
@@ -40,7 +36,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/psychology/game/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+            <state line="33" column="0" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,7 +45,7 @@
       <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/psychology/game/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="24" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+            <state line="29" column="4" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -67,7 +63,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/psychology/game/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="0.20920502">
+            <state line="10" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="0.20920502">
               <folding />
             </state>
           </provider>
@@ -76,7 +72,7 @@
       <file leaf-file-name="level.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/psychology/game/templates/level.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="15" selection-start="44" selection-end="44" vertical-scroll-proportion="-2.5">
+            <state line="13" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="-2.5">
               <folding />
             </state>
           </provider>
@@ -85,7 +81,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/psychology/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="37" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+            <state line="11" column="37" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,7 +128,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="Scope" currentSubView="Problems" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -144,7 +140,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -160,60 +158,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psychology" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psychology" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psychology" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -260,12 +204,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="22" width="1390" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24945135" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24945135" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -349,14 +293,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/psychology/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="37" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+        <state line="11" column="37" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/psychology/game/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+        <state line="29" column="4" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -370,21 +314,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/psychology/game/templates/level.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="15" selection-start="44" selection-end="44" vertical-scroll-proportion="-2.5">
+        <state line="13" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="-2.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/psychology/game/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+        <state line="33" column="0" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/psychology/game/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="0.20920502">
+        <state line="10" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="0.20920502">
           <folding />
         </state>
       </provider>
