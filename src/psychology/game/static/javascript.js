@@ -1,3 +1,4 @@
+var levelcount = 1;
 $(document).ready(function() {
 
 	$("#level").load("/level/1/", function() {
@@ -7,10 +8,14 @@ $(document).ready(function() {
 	});
 
 	$("body").on("click", "#answer", function() {
-		$.get("/answer/1/", {
+		$.get("/answer/" + levelcount + "/", {
 			guess : $('.guess').val()
 		}, function(answer) {
 			console.log(answer);
+			if (answer) {
+				levelcount++;
+				$("#level").load("/level/" + levelcount + "/")
+			}
 
 		});
 	})
