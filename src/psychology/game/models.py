@@ -25,7 +25,7 @@ class Hint(models.Model):
 		return self.text
 
 class Answer(models.Model):
-	level = models.ForeignKey(Level)
+	level = models.ForeignKey(Level, related_name='answers')
 	value = models.CharField(max_length=200)
 	def __unicode__(self):
 		return self.value
