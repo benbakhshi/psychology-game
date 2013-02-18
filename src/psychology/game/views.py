@@ -1,12 +1,18 @@
 # Create your views here.
 from django.shortcuts import render_to_response
-from psychology.game.models import Level, Hint
+from psychology.game.models import Level, Hint, Answer
 
 def level(request, level_id):
     o = Level.objects.get(id=level_id)
 
+    
+    guess = request.GET.get('guess', '')
+    correct = o.answers.filter(value=guess).exists()
+        
     values = {
-    'level':o
+    'level':o,
+    'correct':correct,
+    'guess':guess,
     }
 
     return render_to_response('level.html', values)
@@ -22,3 +28,4 @@ def hint(request, hint_id):
               }
     
     return render_to_response('hint.html', values)
+

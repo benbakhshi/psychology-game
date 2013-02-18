@@ -7,7 +7,27 @@
 {% endfor %}
 
 <br>
-Answer: <input>
+<form method="GET">
+Answer: <input class="guess" name="guess">
+	<button type="submit">Submit</button>
+</form>
+
+{% if correct %}
+<h3>Congratulations!!!!!!</h3>
+<h3><i>{{guess}}</i> is the right answer.</h3>
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
