@@ -1,6 +1,6 @@
-var levelcount = 1;
-$(document).ready(function() {
 
+$(document).ready(function() {
+var levelcount = 1;
 	$("#level").load("/level/1/", function() {
 		$("#level a.hint").fancybox({
 			type : 'ajax'
@@ -19,5 +19,7 @@ $(document).ready(function() {
 
 		});
 	})
+
 });
+
 
