@@ -1,35 +1,13 @@
-
+<div>
 {% for hint in level.hints.all %}
 <a class="hint" href="/hint/{{hint.pk}}/">Hint #{{forloop.counter}}</a>
 {% endfor %}
 
 <br>
-<<<<<<< HEAD
-=======
-<form method="GET">
-Answer: <input class="guess" name="guess">
-	<button type="submit">Submit</button>
-</form>
 
-{% if correct %}
-<h3>Congratulations!!!!!!</h3>
-<h3><i>{{guess}}</i> is the right answer.</h3>
-
-{% endif %}
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> de2be314ef356ce85b944916093292209bcfaab1
 
 Answer: <input class="guess" name="guess">
 <button id="answer">Answer</button>
 
 
+</div>
