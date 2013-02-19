@@ -27,7 +27,12 @@ class Hint(models.Model):
 class Answer(models.Model):
 	level = models.ForeignKey(Level, related_name='answers')
 	value = models.CharField(max_length=200)
+
 	def __unicode__(self):
 		return self.value
+
+#class Point(models.Model):
+	
+#	score = models.IntegerField("")
 	
 # Create your models here.

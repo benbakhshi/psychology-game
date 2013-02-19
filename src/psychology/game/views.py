@@ -1,7 +1,6 @@
 # Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-
 from psychology.game.models import Level, Hint
 import json
 
@@ -25,7 +24,7 @@ def level(request, level_id):
 
 def hint(request, hint_id):
     
-#    clicked = hints.pk from website
+
     
     hint = Hint.objects.get(id=hint_id)
     

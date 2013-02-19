@@ -1,15 +1,18 @@
 <!--<h1 class="worldnum">{{world}}</h1>-->
 <h2 class="levelnum">{{level}}</h2>
 <div>
-{% for hint in level.hints.all %}
-<a class="hint" href="/hint/{{hint.pk}}/">Hint #{{forloop.counter}}</a>
-{% endfor %}
+	{% for hint in level.hints.all %}
+	<input type="button" class="hint btn btn-large"
+			value="Hint #{{forloop.counter}}" data-url="/hint/{{hint.pk}}/">
+	</input>
+	{% endfor %}
 
-<br>
+	<br>
 
-
-Answer: <input class="guess" name="guess">
-<button id="answer">Answer</button>
-
+	Answer:
+	<input class="guess" name="guess">
+	<button id="answer">
+		Answer
+	</button>
 
 </div>
