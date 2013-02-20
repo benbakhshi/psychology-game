@@ -11,14 +11,11 @@ class AnswerInline(admin.TabularInline):
 	list_display = ('answer',)
 
 class LevelAdmin(admin.ModelAdmin):
-#	fieldsets = [
-#	(None, 		{'fields': ['world', 'question']}),
-#	
-#	]
+
 	inlines = [HintInline, AnswerInline]
 	
 	
-	list_display = ('num','get_world','hint_count',)
+	list_display = ('num','get_world','hint_count','points')
 	
 	def hint_count(self,obj):
 		return obj.hints.count()

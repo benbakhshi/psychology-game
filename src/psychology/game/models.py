@@ -12,7 +12,7 @@ class Level(models.Model):
 		
 	world = models.ForeignKey(World)
 	num = models.IntegerField("Level Number")
-	
+	points = models.IntegerField("Point Value")
 	def __unicode__(self):
 		return u"Level Number: %s" % (self.num)
 
@@ -31,8 +31,9 @@ class Answer(models.Model):
 	def __unicode__(self):
 		return self.value
 
+
 #class Point(models.Model):
 	
 #	score = models.IntegerField("")
 	
-# Create your models here.
+
