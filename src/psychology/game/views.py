@@ -6,25 +6,26 @@ import json
 
 
 def game(request):
-    return render_to_response('game.html')
-
+    # loads the game into the game.html, starts at level 1
+    
+    values = {
+              'level':1,
+    }
+    return render_to_response('game.html', values)
 
 def level(request, level_id):
-    o = Level.objects.get(id=level_id)
+    # loads the requested level
     
-    guess = request.GET.get('guess', '')
-    correct = o.answers.filter(value=guess).exists()
-           
+    o = Level.objects.get(id=level_id)
+
     values = {
     'level':o,
-    'correct': correct,
-    'guess' : guess}
+    }
     
     return render_to_response('level.html', values)
 
 def hint(request, hint_id):
-    
-
+    # loads the requested hint 
     
     hint = Hint.objects.get(id=hint_id)
     
@@ -36,10 +37,12 @@ def hint(request, hint_id):
 
 
 def answer(request, level_id):
+    # checks the guess and returns whether the guess was True or False
+
     o = Level.objects.get(id=level_id)
 
-    guess = request.GET.get('guess', '')
-    correct = o.answers.filter(value=guess).exists()
+    guess = request.GET.get('guess', '').strip()
+    correct = o.answers.filter(value__iexact=guess).exists()
            
     return HttpResponse(json.dumps(correct), content_type="application/json")
 

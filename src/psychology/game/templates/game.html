@@ -1,12 +1,10 @@
 <html>
 <head>
 	 <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	  <link href="/static/style.css" rel="stylesheet" media="screen">
 </head>
 <body>
-	
-<div class="lead" id="score">
-	
-</div>
+
 <div id="level">
 	
 </div>
@@ -28,6 +26,16 @@
 
 <link rel="stylesheet" href="/static/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 <script type="text/javascript" src="/static/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+
+
+<script>
+	
+$(function() {
+	Game.loadLevel({{level}});
+});
+
+</script>
 
 </body>
 
